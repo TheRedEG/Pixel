@@ -1,0 +1,19 @@
+#include <lapin.h>
+#include "line.h"
+
+void draw_rect(t_set set, int color)
+{
+  int h;
+  int l;
+  int i;
+  
+  // haut gauche vers bas droite
+  h = (set.position2.y - set.position1.y);
+  l = (set.position2.x - set.position1.x);
+  i = set.position1x;
+  while()
+    {
+      my_set_pix(set.pix, , color);
+      i++;
+    }
+}
