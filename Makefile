@@ -9,12 +9,12 @@ LIB		=	-L/home/${USER}/.froot/lib/ -llapin \
 			-lsfml-system \
 			-lstdc++ -ldl \
 			-lm
-SRC		=	template.c
+SRC		=	my_set_pixel.c
 OBJ		=	$(SRC:.c=.o)
 
 all:		$(NAME)
 $(NAME):
-		gcc $(SRC) $(LIB)
+		gcc *.c $(LIB)
 clean:
 		rm -f $(OBJ)
 fclean:		clean

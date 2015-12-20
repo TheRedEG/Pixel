@@ -5,13 +5,13 @@
 ** Login   <girole_t@epitech.net>
 ** 
 ** Started on  Sat Dec  5 12:13:17 2015 Thomas Girolet
-** Last update Tue Dec 15 14:52:03 2015 Thomas Girolet
+** Last update Sun Dec 20 12:01:13 2015 Thomas Girolet
 */
 
 #include <lapin.h>
 #include "line.h"
 
-void line(t_set set)
+void line(t_set set, unsigned int color)
 {
   t_draw_line		val;
   t_bunny_position	pos;
@@ -50,7 +50,7 @@ void line(t_set set)
       val.px += val.sdx;
       pos.x = val.px;
       pos.y = val.py;
-      my_set_pix(set.pix, &pos, RED);
+      my_set_pix(set.pix, &pos, color);
 	}
     }
   else				/* la ligne est plus verticale que horizontal */
@@ -68,7 +68,7 @@ void line(t_set set)
 	  val.py += val.sdy;
 	  pos.x = val.px;
 	  pos.y = val.py;
-	  my_set_pix(set.pix, &pos, BLUE);
+	  my_set_pix(set.pix, &pos, color);
 	}
     }
 }

@@ -1,3 +1,13 @@
+/*
+** main.c for main in 
+** 
+** Made by Thomas Girolet
+** Login   <girole_t@epitech.net>
+** 
+** Started on  Sun Dec 20 11:57:28 2015 Thomas Girolet
+** Last update Sun Dec 20 12:36:32 2015 Thomas Girolet
+*/
+#include		<stdio.h>
 #include		<lapin.h>
 #include		"line.h"
 
@@ -22,14 +32,8 @@ t_bunny_response	mainloop(void		*_win)
   pos2.x = 1;
   pos2.y = 246;
   back_color(g_pix, &pos2, BLACK);
-  line(set);
-  //new position
-  set.position1.x = 20;
-  line(set);
-  //new pos
-  set.position2.x = 300;
-  set.position2.y = 400;
-  line(set);
+  draw_rect(set, WHITE);
+  //line(set, GREEN);
   //my_set_pix(g_pix, &pos2, RED);
   bunny_blit(&win->buffer, &g_pix->clipable, &pos);
   bunny_display(win);
