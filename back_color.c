@@ -5,7 +5,7 @@
 ** Login   <girole_t@epitech.net>
 ** 
 ** Started on  Sat Dec  5 11:30:54 2015 Thomas Girolet
-** Last update Tue Dec 15 14:50:50 2015 Thomas Girolet
+** Last update Mon Dec 21 16:48:33 2015 Thomas Girolet
 */
 
 #include <lapin.h>
@@ -18,7 +18,7 @@ void	back_color(t_bunny_pixelarray	*pix,
   int		y;
   int		i;
   unsigned int	*pixel;
-
+  
   pixel = (unsigned int*)pix->pixels;
   i = 0;
   x = pix->clipable.buffer.height;
@@ -26,6 +26,6 @@ void	back_color(t_bunny_pixelarray	*pix,
   while (i < (x*y))
     {
       pixel[i] = color;
-      i++;
+      i += 1;
     }
 }
